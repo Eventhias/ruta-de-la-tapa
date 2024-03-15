@@ -2,22 +2,28 @@
 import { Icon } from "astro-icon/components";
 import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
+import { Image } from "astro:assets";
+import logoAyto from "~/assets/logoAyto.png";
 
 const navItems: Array<NavItem> = [
-  { title: "Features", url: "#features" },
-  { title: "Compatibility", url: "#compatibility" },
-  { title: "Showcase", url: "#showcase" },
+  { title: "Establecimientos", url: "#features" },
+  { title: "Premios", url: "#compatibility" },
+  { title: "Contacto", url: "#showcase" },
 ];
 ---
 
 <header
   id="page-header"
-  class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white"
+  class="fixed-header z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white"
 >
   <a class="flex items-center gap-3 hover:!text-default" href="#">
-    <h1 class="sr-only">Astro</h1>
-    <Icon name="logomark" class="size-10" />
-    <Icon name="wordmark" class="hidden h-4 sm:block" />
+    <Image
+        class="size-10 w-7"
+        src={logoAyto}
+        loading="eager"
+        alt="A floating astronaut in a space suit"
+      />
+    <h1>Ayto. Tacoronte</h1>
   </a>
   <div>
     <div class="flex items-center gap-6">
@@ -107,10 +113,10 @@ const navItems: Array<NavItem> = [
   openNavButton.addEventListener("click", openMenu);
   closeNavButton.addEventListener("click", closeMenu);
 
-  document.addEventListener("scroll", () => {
+  /* document.addEventListener("scroll", () => {
     const d = page.clientHeight - page.scrollTop - header.offsetHeight;
     header.classList.toggle("fixed-header", d < 0);
-  });
+  }); */
 
   menu.addEventListener("click", (event) => {
     if ((event.target as HTMLElement).tagName === "A") {
