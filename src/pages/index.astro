@@ -1,12 +1,11 @@
 ---
 import "@fontsource-variable/inter";
-import Compatibility from "~/components/compatibility.astro";
+import Colaboradores from "~/components/colaboradores.astro";
 import Establecimientos from "~/components/establecimientos.astro";
 import Sorteos from "~/components/sorteos.astro";
 import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
 import Intro from "~/components/intro.astro";
-import Showcase from "~/components/showcase.astro";
 import "~/styles/index.css";
 
 const { generator, site } = Astro;
@@ -20,7 +19,7 @@ const description =
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/logoAyto.png" type="image/png" />
+    <link rel="icon" href="https://www.tacoronte.es//sitecontent/uploads/2016/05/cropped-favicon-192x192.png" type="image/png" />
     <meta name="generator" content={generator} />
 
     <title>Ruta de la tapa</title>
@@ -66,7 +65,7 @@ const description =
       <Intro />
       <Establecimientos />
       <Sorteos />
-      <Compatibility />
+      <Colaboradores />
     </div>
     <Footer />
   </body>
