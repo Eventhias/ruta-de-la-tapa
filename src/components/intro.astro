@@ -8,6 +8,7 @@ import tapa1 from "~/assets/tapa1.png";
 <ContentSection title="" id="intro">
     <Image
           slot="eyebrow"
+          class="tapaImage"
           src={tapa1}
           loading="eager"
           alt="A floating astronaut in a space suit"
@@ -36,3 +37,9 @@ import tapa1 from "~/assets/tapa1.png";
     </a>
   </div>
 </ContentSection>
+
+<style>
+  .tapaImage {
+    border-radius: 30%;
+  }
+</style>
