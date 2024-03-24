@@ -8,6 +8,6 @@ a,
 
 .gradient-text {
   @apply bg-clip-text text-transparent;
-  background-image: linear-gradient(to bottom right, #685e53, #c7b6a2);
+  background-image: linear-gradient(to bottom right, #685e53, #c7b6a2, #832F53);
 }
 
