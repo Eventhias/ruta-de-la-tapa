@@ -1,0 +1,64 @@
+---
+import { Icon } from "astro-icon/components";
+import ContentSection from "~/components/content-section.astro";
+import type { FeatureItem } from "~/types";
+
+const features: Array<FeatureItem> = [
+  {
+    title: "Delicioso's Bistro",
+    description: "Calle del Sol, 123, Ciudad Brillante",
+    icon: "mdi:handshake",
+  },
+  {
+    title: "The Rustic Tavern",
+    description:
+      "18 Elm Street, Willow Grove, Springwood",
+    icon: "mdi:feather",
+  },
+  {
+    title: "Flavors of Fusion",
+    description:
+      "42 Maple Avenue, Pinecrest Heights, Lakeview",
+    icon: "mdi:directions-fork",
+  },
+  {
+    title: "The Dining Hub",
+    description:
+      "5 Oak Lane, Sunnyside Plaza, Meadowbrook",
+    icon: "mdi:graph",
+  },
+  {
+    title: "SavorSpot",
+    description:
+      "27 Pine Street, Redwood Town, Cedarville",
+    icon: "mdi:search-web",
+  },
+  {
+    title: "Local Eats",
+    description:
+      "8 Birchwood Drive, Clearview Heights, Greentree",
+    icon: "mdi:account-group",
+  },
+];
+---
+
+<ContentSection title="Establecimientos" id="establecimientos">
+  <Fragment slot="lead">
+    Explora los diversos establecimientos de la 
+    <span class="text-primary">Ruta de la Tapa</span> 
+    y disfruta de una amplia selección de 
+    <span class="text-primary">deliciosas tapas</span> locales.
+  </Fragment>
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {
+      features.map(({ title, description }) => (
+        <a href="http://localhost:4200/app" class="m-1">
+          <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6 h-full" style="border-radius: 10px">
+            <p class="text-center font-extrabold text-xl">{title}</p>
+            <p class="text-center text-offset text-sm">{description}</p>
+          </li>
+        </a>
+      ))
+    }
+  </ul>
+</ContentSection>

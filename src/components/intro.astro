@@ -1,0 +1,49 @@
+---
+import { Icon } from "astro-icon/components";
+import ContentSection from "~/components/content-section.astro";
+import { Image } from "astro:assets";
+import tapa1 from "~/assets/tapa1.png";
+
+const urlProd = "https://www.ferjotech.com/app";
+const urlLocal = "http://localhost:4200/app";
+---
+
+<ContentSection title="" id="intro">
+    <!-- <Image
+          slot="eyebrow"
+          class="tapaImage"
+          src={tapa1}
+          loading="eager"
+          alt="A floating astronaut in a space suit"
+        /> -->
+    <Fragment slot="lead">
+      1ª Edición de la <span class="text-primary">Ruta de la Tapa </span> de la 
+      cebolla de <span class="text-primary">Guayonge</span>.
+      <br>Tacoronte <span class="text-primary">2024</span>
+    </Fragment>
+  <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+    <a
+      href="http://localhost:4200/app"
+      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
+      style="border-radius: 10px"
+    >
+      <Icon name="mdi:login" class="size-8" />
+      <span>Acceder</span>
+    </a>
+    <a
+      href="http://localhost:4200/app"
+      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
+      style="border-radius: 10px"
+    >
+      <Icon name="mdi:star" class="size-8" />
+      <span>Votar Tapa</span>
+    </a>
+  </div>
+</ContentSection>
+
+<style>
+  .intro {
+    background-image: url('https://okdiario.com/img/recetas/2017/03/03/tapas-faciles.jpg');
+    width: 100%;
+  }
+</style>
