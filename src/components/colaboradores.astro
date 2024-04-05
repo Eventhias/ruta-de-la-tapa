@@ -1,26 +1,27 @@
 ---
-import CompatibilityList from "~/components/compatibility-list.astro";
 import ContentSection from "~/components/content-section.astro";
-import type { CompatibilityItem } from "~/types";
+import { Image } from "astro:assets";
+import quimpi from "~/assets/quimpi.png";
 
-const frameworks: Array<CompatibilityItem> = [
+const colaboradores = [
   {
     title: "Quimpi",
-    icon: "frameworks/react",
-    url: "https://reactjs.org/",
+    imagen: quimpi,
+    url: "https://www.quimpi.com/",
   },
   {
     title: "Ayto. Tacoronte",
-    icon: "frameworks/preact",
-    url: "https://preactjs.com/",
+    imagen: quimpi,
+    url: "https://www.tacoronte.es/",
   },
   {
-    title: "Cabildo Insular",
-    icon: "frameworks/svelte",
-    url: "https://svelte.dev/",
+    title: "Cabildo Tenerife",
+    imagen: quimpi,
+    url: "https://www.tenerife.es/portalcabtfe/es/",
   }
 ];
 
+const logoSize = 100
 ---
 
 <ContentSection title="Colaboradores" id="colaboradores">
@@ -28,9 +29,26 @@ const frameworks: Array<CompatibilityItem> = [
     Unidos por la <span class="text-primary">excelencia</span>,
     nuestros valiosos <span class="text-primary">colaboradores</span> lo hacen posible.
   </Fragment>
-  <CompatibilityList
-    items={frameworks}
-    title="Frameworks"
-    url="https://docs.astro.build/core-concepts/framework-components/"
-  />
+  <div class="max-w-6xl space-y-2">
+    <div class="relative border border-default bg-offset px-6 pb-4 pt-8">
+      <ul class="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-3">
+        {
+          colaboradores.map((item) => (
+            <li>
+              <a class="flex flex-col items-center gap-2" href={item.url}>
+                <Image 
+                  class="text-white"
+                  src={item.imagen}
+                  width={logoSize}
+                  loading="eager"
+                  alt="Logo Ayuntamiento de Tacoronte"
+                  />
+                <span></span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
 </ContentSection>
