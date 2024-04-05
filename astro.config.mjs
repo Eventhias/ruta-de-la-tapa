@@ -2,8 +2,7 @@ import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
 import { defineConfig } from "astro/config";
 
-// https://astro.build/config
 export default defineConfig({
-  site: "https://astro-moon-landing.netlify.app/",
+  site: "https://www.eventhias.com/ruta-de-la-tapa-tacoronte",
   integrations: [tailwind(), icon()],
 });

@@ -7,23 +7,18 @@ const links: Array<FooterLink> = [
   {
     url: "https://www.tacoronte.es/",
     description: "Web oficial Ayto. de Tacoronte",
-    icon: "mdi:home",
+    icon: "mdi:web",
   },
   {
-    url: "https://github.com/mhyfritz/astro-landing-page",
-    description: "View source on GitHub",
-    icon: "fa-brands:github-alt",
+    url: "https://www.instagram.com/ayuntamiento_de_tacoronte/",
+    description: "Perfil oficial del Ayto.de Tacoronte",
+    icon: "mdi:instagram",
   },
   {
-    url: "https://astro.build/chat",
+    url: "https://www.facebook.com/ayuntamiento.tacoronte",
     description: "Astro on Discord",
-    icon: "fa-brands:discord",
-  },
-  {
-    url: "https://twitter.com/astrodotbuild",
-    description: "Astro on Twitter",
-    icon: "fa-brands:twitter",
-  },
+    icon: "mdi:facebook",
+  }
 ];
 ---
 
@@ -31,7 +26,7 @@ const links: Array<FooterLink> = [
   <div class="absolute inset-0 overflow-hidden opacity-40">
     <HeroImage />
   </div>
-  <ul class="relative grid grid-cols-2 gap-4 sm:grid-cols-4">
+  <ul class="relative grid grid-cols-3 gap-4 sm:grid-cols-3">
     {
       links.map((link) => (
         <li>

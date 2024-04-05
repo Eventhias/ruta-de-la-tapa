@@ -2,26 +2,30 @@
 import ContentSection from "~/components/content-section.astro";
 import { Image } from "astro:assets";
 import quimpi from "~/assets/quimpi.png";
+import cabildo from "~/assets/cabildo.png";
+import tacoronte from "~/assets/tacoronte.png";
 
 const colaboradores = [
+  {
+    title: "Ayto. Tacoronte",
+    imagen: tacoronte,
+    url: "https://www.tacoronte.es/",
+    size: 90
+  },
   {
     title: "Quimpi",
     imagen: quimpi,
     url: "https://www.quimpi.com/",
-  },
-  {
-    title: "Ayto. Tacoronte",
-    imagen: quimpi,
-    url: "https://www.tacoronte.es/",
+    size: 150
   },
   {
     title: "Cabildo Tenerife",
-    imagen: quimpi,
+    imagen: cabildo,
     url: "https://www.tenerife.es/portalcabtfe/es/",
+    size: 100
   }
 ];
 
-const logoSize = 100
 ---
 
 <ContentSection title="Colaboradores" id="colaboradores">
@@ -31,7 +35,7 @@ const logoSize = 100
   </Fragment>
   <div class="max-w-6xl space-y-2">
     <div class="relative border border-default bg-offset px-6 pb-4 pt-8">
-      <ul class="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-3">
+      <ul class="grid grid-cols-1 gap-8 sm:grid-cols-3 md:grid-cols-3">
         {
           colaboradores.map((item) => (
             <li>
@@ -39,7 +43,7 @@ const logoSize = 100
                 <Image 
                   class="text-white"
                   src={item.imagen}
-                  width={logoSize}
+                  width={item.size}
                   loading="eager"
                   alt="Logo Ayuntamiento de Tacoronte"
                   />
