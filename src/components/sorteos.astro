@@ -5,22 +5,22 @@ import type { FeatureItem } from "../types";
 
 const features: Array<FeatureItem> = [
   {
-    title: "Obsequios y Regalos",
-    description: "De la mano de nuestras pymes y colaboradores",
-    icon: "mdi:gift",
+    title: "Premios",
+    description: "Al finalizar el evento de la ruta, las 3 tapas con mayor puntuación ganarán el primer, segundo y tercer premio.",
+    icon: "mdi:medal",
   },
   {
-    title: "Cenas",
+    title: "Sorteos",
     description:
-      "Sorteo de 3 cenas para 2 personas, a criterio de los ganadores de la ruta",
-    icon: "mdi:food",
+      "Se sortearán 3 cenas para 2 personas en los establecimientos ganadores de nuestra 1ª Edición de la Ruta de la Tapa de la cebolla de Guayonje.",
+    icon: "mdi:clover",
   }
 ];
 ---
 
-<ContentSection title="Sorteos" id="sorteos">
+<ContentSection title="Premios y Sorteos" id="sorteos">
   <Fragment slot="lead">
-    La Ruta estará llena de <span class="text-primary">obsequios, regalos y premios</span> entre los participantes que voten.
+    La Ruta contará con una serie de <span class="text-primary">premios y sorteos</span> para los establecimientos y participantes que voten en la App.
   </Fragment>
   <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2">
     {

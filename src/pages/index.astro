@@ -6,12 +6,13 @@ import Sorteos from "~/components/sorteos.astro";
 import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
 import Intro from "~/components/intro.astro";
+import Splash from "~/components/splash.astro";
 import "~/styles/index.css";
 
 const { generator, site } = Astro;
 const image = new URL("social.jpg", site);
 const description =
-  "Build fast websites, faster. Astro is a new kind of site builder for the modern web. Lightning-fast performance meets powerful developer experience.";
+  "Bienvenido a la 1ª Edición de la Ruta de la Tapa de la cebolla de Guayonje.";
 ---
 
 <!doctype html>
@@ -61,8 +62,8 @@ const description =
     class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white"
   >
     <Header />
+    <Splash />
     <div class="space-y-24 px-8 py-32">
-      <Intro />
       <Establecimientos />
       <Sorteos />
       <Colaboradores />
