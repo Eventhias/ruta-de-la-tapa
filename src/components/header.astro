@@ -51,7 +51,7 @@ const navItems: Array<NavItem> = [
       <ThemeSwitcher />
     </div>
     <div id="menu-modal" class="modal hidden" aria-hidden="true">
-      <div class="fixed inset-0 bg-default px-8 py-4 text-default">
+      <div class="fixed inset-0 tacoronte-bg px-8 py-4 text-default">
         <div class="space-y-4" role="dialog" aria-modal="true">
           <header class="text-right">
             <button
@@ -145,5 +145,13 @@ const navItems: Array<NavItem> = [
   }
   .modal.is-open {
     @apply block;
+  }
+
+  .tacoronte-bg {
+    background-image: 
+      linear-gradient(var(--color-background-title-6), var(--color-background-title-9)),
+      url('../assets/tacoronte_bg.jpg');
+    background-size: cover;
+    background-position: left;
   }
 </style>
