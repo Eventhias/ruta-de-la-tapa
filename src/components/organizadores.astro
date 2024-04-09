@@ -1,0 +1,74 @@
+---
+import ContentSection from "~/components/content-section.astro";
+import { Image } from "astro:assets";
+import quimpi from "~/assets/quimpi.png";
+import cabildo from "~/assets/cabildo.png";
+import tacoronte from "~/assets/tacoronte.png";
+
+const organizadores = [
+  {
+    title: "Ayto. Tacoronte",
+    imagen: tacoronte,
+    url: "https://www.tacoronte.es/",
+    size: 90
+  },
+  {
+    title: "Quimpi",
+    imagen: quimpi,
+    url: "https://www.quimpi.com/",
+    size: 150
+  }
+];
+
+const partners = [
+  {
+    title: "Cabildo Tenerife",
+    imagen: cabildo,
+    url: "https://www.tenerife.es/portalcabtfe/es/",
+    size: 100,
+  }
+];
+
+---
+
+<ContentSection title="Organizadores" id="organizadores">
+  <Fragment slot="lead">
+    El equipo detrás del <span class="text-primary">éxito</span> de esta ruta,
+    asegurando resultados de <span class="text-primary">calidad</span>.
+  </Fragment>
+    <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2">
+      {
+        organizadores.map((item) => (
+          <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6 h-full" style="border-radius: 10px">
+            <a class="flex flex-col items-center gap-2" href={item.url}>
+              <Image 
+                class="text-white"
+                src={item.imagen}
+                width={item.size}
+                loading="eager"
+                alt={item.title}
+                />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <span class="text-primary font-bold" style="font-size: 30px">Colabora</span>
+    <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-2" style="margin-top: 0">
+      {
+        partners.map((item) => (
+          <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6 h-full" style="border-radius: 10px">
+            <a class="flex flex-col items-center gap-2" href={item.url}>
+              <Image 
+                class="text-white"
+                src={item.imagen}
+                width={item.size}
+                loading="eager"
+                alt={item.title}
+                />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+</ContentSection>
