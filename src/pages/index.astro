@@ -1,12 +1,12 @@
 ---
 import "@fontsource-variable/inter";
-import Colaboradores from "~/components/colaboradores.astro";
 import Establecimientos from "~/components/establecimientos.astro";
 import Sorteos from "~/components/sorteos.astro";
 import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
 import Splash from "~/components/splash.astro";
 import "~/styles/index.css";
+import Organizadores from "~/components/organizadores.astro";
 
 const { generator, site } = Astro;
 const image = new URL("social.jpg", site);
@@ -65,7 +65,7 @@ const description =
     <div class="space-y-24 px-8 py-32">
       <Establecimientos />
       <Sorteos />
-      <Colaboradores />
+      <Organizadores />
     </div>
     <Footer />
   </body>
