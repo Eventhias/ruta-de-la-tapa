@@ -5,6 +5,7 @@
   --color-text-offset:  #561c24;
   --color-background: theme("colors.gray.50");
   --color-background-offset: theme("colors.gray.100");
+  --color-background-partners: #91677a;
   --color-border: theme("colors.gray.900" / 10%);
   --color-background-title-6: rgba(86, 28, 36, 0.4);
   --color-background-title-9: rgba(86, 28, 36, 0.7);
@@ -17,6 +18,7 @@
   --color-text-offset:  #C7B7A3;
   --color-background: #561c24;
   --color-background-offset: #832F53;
+  --color-background-partners: #832F53;
   --color-border: theme("colors.gray.50" / 10%);
   --color-background-title-6: rgba(86, 28, 36, 0.6);
   --color-background-title-9: rgba(86, 28, 36, 0.9);
