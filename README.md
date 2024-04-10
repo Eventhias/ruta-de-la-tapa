@@ -1,14 +1,14 @@
-# Astro Landing Page <picture><source media="(prefers-color-scheme: dark)" srcset="https://astro.build/assets/press/astro-icon-light.png"><source media="(prefers-color-scheme: light)" srcset="https://astro.build/assets/press/astro-icon-dark.png"><img align="right" valign="center" height="79" width="63" src="https://astro.build/assets/press/astro-icon-dark.png" alt="Astro logo" /></picture>
+# Eventhias Landing Page <picture><source media="(prefers-color-scheme: dark)" srcset="https://eventhias.com/logo-eventhias.png"><source media="(prefers-color-scheme: light)" srcset="https://eventhias.com/logo-eventhias.png"><img align="right" valign="center" height="79" width="63" src="https://eventhias.com/logo-eventhias.png" alt="Eventhias logo" /></picture>
 
-> An Astro + Tailwind CSS example/template for landing pages.
+> An Astro + Tailwind CSS template for landing pages created by Eventhias.com.
 
 <div align="center">
 
-[![Built with Astro](https://astro.badg.es/v2/built-with-astro/small.svg)](https://astro.build)
+[![Built with Eventhias](https://eventhias.com/logo-eventhias.png)](https://eventhias.com)
 
 </div>
 
-![Screenshots of Astro Landing Page](screenshots.jpg)
+![Screenshots of Landing Page](src/assets/social.jpg)
 
 ## Features
 
@@ -35,10 +35,11 @@
 | `npm run format`       | Format code with [Prettier](https://prettier.io/) |
 | `npm run clean`        | Remove `node_modules` and build output            |
 
-## Credits
+## Build and deploy
 
-- astronaut image
-  - source: https://github.com/withastro/astro-og-image; note: this repo is not available anymore
-- moon image
-  - source: https://unsplash.com/@nasa
-- other than that, a lot of material (showcase data, copy) was taken from official Astro sources, in particular https://astro.build/blog/introducing-astro/ and https://github.com/withastro/astro.build
+- npm run build
+- open dist folder
+- move image dist/tacoronte_bg.DLFsZTo3.jpg into _astro folder
+- search /_astro throughout the project
+- replace it with /ruta-de-la-tapa-tacoronte/_astro
+- adds the contents of the dist folder to the web host 
