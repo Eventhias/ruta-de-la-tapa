@@ -42,5 +42,6 @@
 - move image dist/tacoronte_bg.DLFsZTo3.jpg into _astro folder
 - search /_astro throughout the project
 - replace it with /ruta-de-la-tapa-tacoronte/_astro
-- check that in the index.html line 1 social media the image social.jpg is correctly imported
+- search /social.jpg in index.html
+- replace it with /ruta-de-la-tapa-tacoronte/social.jpg
 - adds the contents of the dist folder to the web host 
