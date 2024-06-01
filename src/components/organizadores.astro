@@ -31,33 +31,16 @@ const partners = [
 
 ---
 
-<ContentSection title="Organizadores" id="organizadores">
+<ContentSection title="Organiza" id="organizadores">
   <Fragment slot="lead">
-    El equipo detrás del <span class="text-primary">éxito</span> de esta ruta,
-    asegurando resultados de <span class="text-primary">calidad</span>.
+    CONCEJALÍA DE <br> COMERCIO Y CULTURA
   </Fragment>
-    <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2">
+  
+    <span class="text-primary font-bold" style="font-size: 30px">Colabora</span>
+    <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 gap-2" style="margin-top: 0">
       {
         organizadores.map((item) => (
           <li class="flex flex-col items-center gap-4 border border-default p-6 h-full" style="border-radius: 10px; background-color: var(--color-background-partners)">
-            <a class="flex flex-col items-center gap-2" href={item.url}>
-              <Image 
-                class="text-white"
-                src={item.imagen}
-                width={item.size}
-                loading="eager"
-                alt={item.title}
-                />
-            </a>
-          </li>
-        ))
-      }
-    </ul>
-    <span class="text-primary font-bold" style="font-size: 30px">Colabora</span>
-    <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-2" style="margin-top: 0">
-      {
-        partners.map((item) => (
-          <li class="flex flex-col items-center gap-4 border border-default p-6" style="border-radius: 10px; background-color: var(--color-background-partners)">
             <a class="flex flex-col items-center gap-2" href={item.url}>
               <Image 
                 class="text-white"
