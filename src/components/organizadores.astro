@@ -4,19 +4,14 @@ import { Image } from "astro:assets";
 import quimpi from "~/assets/quimpi.png";
 import cabildo from "~/assets/cabildo.png";
 import tacoronte from "~/assets/tacoronte.png";
+import comercio from "~/assets/comercio.png";
 
 const organizadores = [
   {
     title: "Ayto. Tacoronte",
     imagen: tacoronte,
     url: "https://www.tacoronte.es/",
-    size: 90
-  },
-  {
-    title: "Quimpi",
-    imagen: quimpi,
-    url: "https://www.quimpi.com/",
-    size: 150
+    size: 120
   }
 ];
 
@@ -25,7 +20,19 @@ const partners = [
     title: "Cabildo Tenerife",
     imagen: cabildo,
     url: "https://www.tenerife.es/portalcabtfe/es/",
-    size: 100,
+    size: 150,
+  },
+  {
+    title: "Comercio de Tenerife",
+    imagen: comercio,
+    url: "https://www.tenerifecomercio.com/",
+    size: 140
+  },
+  {
+    title: "Quimpi",
+    imagen: quimpi,
+    url: "https://www.quimpi.com/",
+    size: 130
   }
 ];
 
@@ -33,14 +40,31 @@ const partners = [
 
 <ContentSection title="Organiza" id="organizadores">
   <Fragment slot="lead">
-    CONCEJALÍA DE <br> COMERCIO Y CULTURA
+    CONCEJALÍA DE <br> COMERCIO Y SECTOR PRIMARIO
+    <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 gap-2" style="margin-top: 0">
+      {
+        organizadores.map((item) => (
+          <li class="flex flex-col items-center gap-4 p-6 h-full">
+            <a class="flex flex-col items-center gap-2" href={item.url}>
+              <Image 
+                class="text-white"
+                src={item.imagen}
+                width={item.size}
+                loading="eager"
+                alt={item.title}
+                />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
   </Fragment>
   
     <span class="text-primary font-bold" style="font-size: 30px">Colabora</span>
     <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 gap-2" style="margin-top: 0">
       {
-        organizadores.map((item) => (
-          <li class="flex flex-col items-center gap-4 border border-default p-6 h-full" style="border-radius: 10px; background-color: var(--color-background-partners)">
+        partners.map((item) => (
+          <li class="flex flex-col items-center gap-4 p-6 h-full">
             <a class="flex flex-col items-center gap-2" href={item.url}>
               <Image 
                 class="text-white"
