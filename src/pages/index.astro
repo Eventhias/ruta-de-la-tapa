@@ -35,9 +35,8 @@ const description =
 
     <!-- initialize theme -->
     <script is:inline>
-      const themeSaved = localStorage.getItem("theme");
       localStorage.setItem("theme", "dark");
-      themeSaved = "dark";
+      const themeSaved = localStorage.getItem("theme");
       if (themeSaved) {
         document.documentElement.dataset.theme = themeSaved;
       } else {
