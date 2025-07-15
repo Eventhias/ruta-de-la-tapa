@@ -7,26 +7,26 @@ import { Icon } from "astro-icon/components";
 
 const widths = [450, 800];
 const sizes = "(min-width: 640px) 42vw, 67vw";
-const logoSize = 80
+const logoSize = 80;
 ---
 
-<section class="relative h-full tacoronte-bg">
+<section class="tacoronte-bg relative h-full">
   <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
     <HeroImage />
   </div>
-  <div class="relative grid h-full place-items-center sm:grid-cols-2 mx-3">
+  <div class="relative mx-3 grid h-full place-items-center sm:grid-cols-2">
     <h2
       class="flex flex-col items-center gap-2 self-end sm:gap-4 sm:self-auto sm:justify-self-end"
     >
-      <Image 
+      <Image
         class="text-white"
         src={logoAyto}
         width={logoSize}
         loading="eager"
         alt="Logo Ayuntamiento de Tacoronte"
-        />
+      />
       <div
-        class="text-white text-center font-extrabold tracking-tighter text-4xl"
+        class="text-center font-extrabold tracking-tighter text-white text-4xl"
       >
         II Edición
         <br /> Ruta de la Tapa
@@ -34,7 +34,33 @@ const logoSize = 80
       </div>
       <!-- <div style="text-align: center;">Del 6 al 30 de Junio <br> ¡No te la pierdas!</div> -->
       <!-- <div style="text-align: center;">Estamos ultimando detalles... <br> ¡En breve comenzamos!</div> -->
-      <div style="text-align: center;">La ruta ha finalizado<br> ¡En breve conoceremos a los ganadores!</div>
+      <!-- <div style="text-align: center;">La ruta ha finalizado<br> ¡En breve conoceremos a los ganadores!</div> -->
+      <div style="mt-4 text-align: center;">Ganadores:</div>
+
+      <div class="mt-1 flex flex-col gap-4 text-white">
+  <!-- 1er Lugar -->
+  <div class="flex items-center gap-4 text-[clamp(0.9rem,2.5vw,1.2rem)]">
+    <Icon name="mdi:trophy" class="text-yellow-400" style="font-size: clamp(1.5rem, 4vw, 2.5rem);" />
+    <span class="font-extrabold">1º</span>
+    <span class="truncate">Restaurante El Pole</span>
+  </div>
+
+  <!-- 2º Lugar -->
+  <div class="flex items-center gap-4 text-[clamp(0.9rem,2.5vw,1.2rem)]">
+    <Icon name="mdi:trophy" class="text-gray-300" style="font-size: clamp(1.5rem, 4vw, 2.5rem);" />
+    <span class="font-bold">2º</span>
+    <span class="truncate">Kambala-che</span>
+  </div>
+
+  <!-- 3er Lugar -->
+  <div class="flex items-center gap-4 text-[clamp(0.9rem,2.5vw,1.2rem)]">
+    <Icon name="mdi:trophy" class="text-amber-700" style="font-size: clamp(1.5rem, 4vw, 2.5rem);" />
+    <span class="font-bold">3º</span>
+    <span class="truncate">Bodegón Los Laureles</span>
+  </div>
+</div>
+
+
       <!-- <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
         <a
           href="https://ruta-2025-login.pages.dev/login"
@@ -58,15 +84,15 @@ const logoSize = 80
       id="astronaut"
       class="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start"
       style="text-align: center;"
-      >
-        <Image
-          class="h-full w-full object-cover"
-          src={cebolla}
-          widths={widths}
-          sizes={sizes}
-          loading="eager"
-          alt="Cebolla de Guayonje"
-        />
+    >
+      <Image
+        class="h-full w-full object-cover"
+        src={cebolla}
+        widths={widths}
+        sizes={sizes}
+        loading="eager"
+        alt="Cebolla de Guayonje"
+      />
     </div>
   </div>
 </section>
@@ -108,9 +134,11 @@ const logoSize = 80
     }
   }
   .tacoronte-bg {
-    background-image: 
-      linear-gradient(var(--color-background-title-6), var(--color-background-title-9)),
-      url('../assets/tacoronte_bg.jpg');
+    background-image: linear-gradient(
+        var(--color-background-title-6),
+        var(--color-background-title-9)
+      ),
+      url("../assets/tacoronte_bg.jpg");
     background-size: cover;
     background-position: left;
   }
