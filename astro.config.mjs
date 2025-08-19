@@ -3,6 +3,6 @@ import icon from "astro-icon";
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: "https://www.eventhias.com/ruta-de-la-tapa-tacoronte",
+  site: "https://www.eventhias.com/ruta-demo-eventhias",
   integrations: [tailwind(), icon()],
 });
