@@ -3,13 +3,13 @@ import { Icon } from "astro-icon/components";
 import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
 import { Image } from "astro:assets";
-import logoAyto from "~/assets/logoAyto.png";
+import logo from "~/assets/eventhias-logo.png";
 
 const navItems: Array<NavItem> = [
   { title: "La Tapa", url: "#establecimientos" },
   { title: "Premios y Sorteos", url: "#sorteos" },
   { title: "Organizadores", url: "#organizadores" },
-  // { title: "Ir a la APP", url: "#" },
+  { title: "Ir a la APP", url: "#" },
 ];
 ---
 
@@ -19,12 +19,12 @@ const navItems: Array<NavItem> = [
 >
   <a class="flex items-center gap-3 hover:!text-default" href="#">
     <Image
-        class="size-10 w-7"
-        src={logoAyto}
+        class="size-7 w-7"
+        src={logo}
         loading="eager"
         alt="Logo Ayuntamiento de Tacoronte"
       />
-    <h1>Ayto. Tacoronte</h1>
+    <h1>Ruta Eventhias</h1>
   </a>
   <div>
     <div class="flex items-center gap-6">
@@ -66,8 +66,8 @@ const navItems: Array<NavItem> = [
           </header>
           <div class="flex justify-center">
             <Image
-              class="size-10 w-7"
-              src={logoAyto}
+              class="size-7 w-7"
+              src={logo}
               loading="eager"
               alt="A floating astronaut in a space suit"
             />
@@ -151,7 +151,7 @@ const navItems: Array<NavItem> = [
   .tacoronte-bg {
     background-image: 
       linear-gradient(var(--color-background-title-6), var(--color-background-title-9)),
-      url('../assets/tacoronte_bg.jpg');
+      url('../assets/hero-bg.jpg');
     background-size: cover;
     background-position: left;
   }

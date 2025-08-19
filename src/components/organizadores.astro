@@ -3,14 +3,14 @@ import ContentSection from "~/components/content-section.astro";
 import { Image } from "astro:assets";
 import quimpi from "~/assets/quimpi.png";
 import cabildo from "~/assets/cabildo.png";
-import tacoronte from "~/assets/tacoronte.png";
+import logo from "~/assets/eventhias-logo.png";
 import comercio from "~/assets/comercio.png";
 
 const organizadores = [
   {
-    title: "Ayto. Tacoronte",
-    imagen: tacoronte,
-    url: "https://www.tacoronte.es/",
+    title: "Eventhias",
+    imagen: logo,
+    url: "https://www.eventhias.com/",
     size: 120
   }
 ];
@@ -40,7 +40,7 @@ const partners = [
 
 <ContentSection title="Organiza" id="organizadores">
   <Fragment slot="lead">
-    CONCEJALÍA DE <br> COMERCIO Y SECTOR PRIMARIO
+    AYUNTAMIENTO <br> O CONCEJALÍA CORRESPONDIENTE
     <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 gap-2" style="margin-top: 0">
       {
         organizadores.map((item) => (

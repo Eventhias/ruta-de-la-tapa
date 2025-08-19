@@ -11,7 +11,7 @@ import Organizadores from "~/components/organizadores.astro";
 const { generator, site } = Astro;
 const image = new URL("social.jpg", site);
 const description =
-  "Bienvenido a la II Edición de la Ruta de la Tapa de la cebolla de Guayonje.";
+  "Bienvenido a la Demo de la Ruta de la Tapa de Eventhias.";
 ---
 
 <!doctype html>
@@ -19,14 +19,14 @@ const description =
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="./tacoronte.png" type="image/png" />
+    <link rel="icon" href="./eventhias-logo.png" type="image/png" />
     <meta name="generator" content={generator} />
 
-    <title>II Edición Ruta de la Tapa Cebolla Guayonje</title>
+    <title>Ruta de la Tapa de Eventhias</title>
     <meta name="description" content={description} />
 
     <!-- social media -->
-    <meta property="og:title" content="Ayto. Tacoronte" />
+    <meta property="og:title" content="Eventhias" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />

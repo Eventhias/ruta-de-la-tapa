@@ -1,12 +1,12 @@
 ---
 import { Image } from "astro:assets";
-import cebolla from "~/assets/cebollaGuayonje.png";
-import logoAyto from "~/assets/logoAyto.png";
+import tapa1 from "~/assets/tapa1-rbg.png";
+import eventhiasLogo from "~/assets/eventhias-logo.png";
 import HeroImage from "~/components/hero-image.astro";
 import { Icon } from "astro-icon/components";
 
 const widths = [450, 800];
-const sizes = "(min-width: 640px) 42vw, 67vw";
+const sizes = "(min-width: 340px) 22vw, 37vw";
 const logoSize = 80;
 ---
 
@@ -20,45 +20,39 @@ const logoSize = 80;
     >
       <Image
         class="text-white"
-        src={logoAyto}
+        src={eventhiasLogo}
         width={logoSize}
         loading="eager"
-        alt="Logo Ayuntamiento de Tacoronte"
+        alt="Logo Eventhias"
       />
       <div
         class="text-center font-extrabold tracking-tighter text-white text-4xl"
       >
-        II Edición
+        Bienvenido a la
         <br /> Ruta de la Tapa
-        <br /> Cebolla de Guayonje
       </div>
-      <!-- <div style="text-align: center;">Del 6 al 30 de Junio <br> ¡No te la pierdas!</div> -->
+      <div style="text-align: center; margin-bottom: 1rem;">Durante todo el mes <br> ¡No te la pierdas!</div>
       <!-- <div style="text-align: center;">Estamos ultimando detalles... <br> ¡En breve comenzamos!</div> -->
       <!-- <div style="text-align: center;">La ruta ha finalizado<br> ¡En breve conoceremos a los ganadores!</div> -->
-      <div style="mt-4 text-align: center;">Ganadores:</div>
-
+      
+      <!-- <div style="mt-4 text-align: center;">Ganadores:</div>
       <div class="mt-1 flex flex-col gap-4 text-white">
-  <!-- 1er Lugar -->
-  <div class="flex items-center gap-4 text-[clamp(0.9rem,2.5vw,1.2rem)]">
-    <Icon name="mdi:trophy" class="text-yellow-400" style="font-size: clamp(1.5rem, 4vw, 2.5rem);" />
-    <span class="font-extrabold">1º</span>
-    <span class="truncate">Restaurante El Pole</span>
-  </div>
-
-  <!-- 2º Lugar -->
-  <div class="flex items-center gap-4 text-[clamp(0.9rem,2.5vw,1.2rem)]">
-    <Icon name="mdi:trophy" class="text-gray-300" style="font-size: clamp(1.5rem, 4vw, 2.5rem);" />
-    <span class="font-bold">2º</span>
-    <span class="truncate">Kambala-che</span>
-  </div>
-
-  <!-- 3er Lugar -->
-  <div class="flex items-center gap-4 text-[clamp(0.9rem,2.5vw,1.2rem)]">
-    <Icon name="mdi:trophy" class="text-amber-700" style="font-size: clamp(1.5rem, 4vw, 2.5rem);" />
-    <span class="font-bold">3º</span>
-    <span class="truncate">Bodegón Los Laureles</span>
-  </div>
-</div>
+        <div class="flex items-center gap-4 text-[clamp(0.9rem,2.5vw,1.2rem)]">
+          <Icon name="mdi:trophy" class="text-yellow-400" style="font-size: clamp(1.5rem, 4vw, 2.5rem);" />
+          <span class="font-extrabold">1º</span>
+          <span class="truncate">Restaurante El Pole</span>
+        </div>
+        <div class="flex items-center gap-4 text-[clamp(0.9rem,2.5vw,1.2rem)]">
+          <Icon name="mdi:trophy" class="text-gray-300" style="font-size: clamp(1.5rem, 4vw, 2.5rem);" />
+          <span class="font-bold">2º</span>
+          <span class="truncate">Kambala-che</span>
+        </div>
+        <div class="flex items-center gap-4 text-[clamp(0.9rem,2.5vw,1.2rem)]">
+          <Icon name="mdi:trophy" class="text-amber-700" style="font-size: clamp(1.5rem, 4vw, 2.5rem);" />
+          <span class="font-bold">3º</span>
+          <span class="truncate">Bodegón Los Laureles</span>
+        </div>
+      </div> -->
 
 
       <!-- <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
@@ -87,11 +81,11 @@ const logoSize = 80;
     >
       <Image
         class="h-full w-full object-cover"
-        src={cebolla}
+        src={tapa1}
         widths={widths}
         sizes={sizes}
         loading="eager"
-        alt="Cebolla de Guayonje"
+        alt="Tapa 1"
       />
     </div>
   </div>
@@ -138,7 +132,7 @@ const logoSize = 80;
         var(--color-background-title-6),
         var(--color-background-title-9)
       ),
-      url("../assets/tacoronte_bg.jpg");
+      url("../assets/hero-bg.jpg");
     background-size: cover;
     background-position: left;
   }

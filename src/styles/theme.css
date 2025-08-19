@@ -1,25 +1,25 @@
 [data-theme="light"] {
-  --color-primary: theme("colors.pink.500");
-  --color-secondary: #685e53;
-  --color-text: #832F53;
-  --color-text-offset:  #561c24;
-  --color-background: theme("colors.gray.50");
-  --color-background-offset: theme("colors.gray.100");
-  --color-background-partners: #91677a;
-  --color-border: theme("colors.gray.900" / 10%);
-  --color-background-title-6: rgba(86, 28, 36, 0.4);
-  --color-background-title-9: rgba(86, 28, 36, 0.7);
+  --color-primary: theme("colors.blue.500");
+  --color-text: #ffffff;
+  --color-secondary: #d1d5db; /* gris claro */
+  --color-text-offset:  #9ca3af; /* gris medio */
+  --color-background: #1e293b; /* gris azulado oscuro */
+  --color-background-offset: #334155; /* tono intermedio */
+  --color-background-partners: #334155;
+  --color-border: theme("colors.gray.50" / 10%);
+  --color-background-title-6: rgba(30, 41, 59, 0.6);
+  --color-background-title-9: rgba(30, 41, 59, 0.9);
 }
 
 [data-theme="dark"] {
-  --color-primary: theme("colors.pink.500");
+  --color-primary: theme("colors.blue.500");
   --color-text: #ffffff;
-  --color-secondary: #cbcbcb;
-  --color-text-offset:  #C7B7A3;
-  --color-background: #561c24;
-  --color-background-offset: #832F53;
-  --color-background-partners: #832F53;
+  --color-secondary: #d1d5db; /* gris claro */
+  --color-text-offset:  #9ca3af; /* gris medio */
+  --color-background: #1e293b; /* gris azulado oscuro */
+  --color-background-offset: #334155; /* tono intermedio */
+  --color-background-partners: #334155;
   --color-border: theme("colors.gray.50" / 10%);
-  --color-background-title-6: rgba(86, 28, 36, 0.6);
-  --color-background-title-9: rgba(86, 28, 36, 0.9);
+  --color-background-title-6: rgba(30, 41, 59, 0.6);
+  --color-background-title-9: rgba(30, 41, 59, 0.9);
 }

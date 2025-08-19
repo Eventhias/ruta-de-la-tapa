@@ -8,6 +8,6 @@ a,
 
 .gradient-text {
   @apply bg-clip-text text-transparent;
-  background-color: theme("colors.pink.500");
+  background-color: theme("colors.blue.500");
 }
 
